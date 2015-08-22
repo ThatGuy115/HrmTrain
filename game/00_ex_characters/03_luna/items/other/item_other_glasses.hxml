@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<item>
+	<key>other_glasses</key>
+
+	<style name="default">
+		<frame>other/other_glasses.png</frame>
+		<folder>clothes</folder>
+		<parent>dress</parent>
+		<zorder>dress+1</zorder>
+	</style>
+</item>

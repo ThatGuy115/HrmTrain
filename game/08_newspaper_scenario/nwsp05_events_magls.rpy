@@ -56,9 +56,12 @@ label nsp_event_magls_1 :
             her "Ладно, думаю ничего страшного тут нет."
             
             $screens.Show(Dissolve(1), "blkfade") #Completely black screen.
-            call wrd_dress_undress
-            $ herView.data().addItem ("item_tits_no")
-            $ herView.data().addItemSet( 'hermione_business_clothes' )
+            $hermi.WrdDress ("skirt_business")
+            $hermi.WrdDress ("shirt_business")
+            $hermi.WrdDress ("tights")
+            $hermi.WrdNoOther()
+            $hermi.WrdMain()
+            $ herView.data().setStyleKey( 'shirt_business', 'closed' )
             hide screen hermione_02
             show screen nsp_hermione_business
             $herView.hideshowQQ( "body_01.png", pos )
@@ -71,7 +74,7 @@ label nsp_event_magls_1 :
             m "Попробуй расстегнуть пару верхних пуговиц."
             $herView.hideshowQQ( "body_02.png", pos )
             her "Да, сэр."
-            $ herView.data().setStyleKey( 'shirt_blouse_business1', 'opened_1' )
+            $hermi.WrdMain()
             pause.5
             g9 "Вот, гораздо лучше."
             $herView.hideshowQQ( "body_12.png", pos )
@@ -83,10 +86,11 @@ label nsp_event_magls_1 :
             her "Всегда, сэр."
             
             $screens.Show(Dissolve(1), "blkfade") #Completely black screen.
-            call wrd_dress_undress
-            $ herView.data().addItem ("item_tits_no")
-            $ herView.data().addItemSet( 'hermione_business_clothes' )
-            $ herView.data().setStyleKey( 'shirt_blouse_business1', 'opened_1' )
+            $hermi.WrdDress ("skirt_business")
+            $hermi.WrdDress ("shirt_business")
+            $hermi.WrdDress ("tights")
+            $hermi.WrdNoOther()
+            $hermi.WrdMain()
             hide screen hermione_02
             show screen nsp_hermione_business
             pause.5
@@ -100,8 +104,7 @@ label nsp_event_magls_1 :
         
         $herView.hideshowQQ( "body_01.png", pos )
         hide screen nsp_hermione_business
-        $ herView.data().delItemSet( 'hermione_business_clothes' )
-        call wrd_dress_change_silent
+        $hermi.WrdSetMain()
         
     
     
@@ -134,10 +137,11 @@ label nsp_event_magls_1_complete :
     
         hide screen hermione_02
         show screen nsp_hermione_business
-        call wrd_dress_undress
-        $ herView.data().addItem ("item_tits_no")
-        $ herView.data().addItemSet( 'hermione_business_clothes' )
-        $ herView.data().setStyleKey( 'shirt_blouse_business1', 'opened_1' )
+        $hermi.WrdDress ("skirt_business")
+        $hermi.WrdDress ("shirt_business")
+        $hermi.WrdDress ("tights")
+        $hermi.WrdNoOther()
+        $hermi.WrdMain()
         $herView.hideshowQQ( "body_01.png", pos )
     
         her "А вот и я, сэр"
@@ -161,8 +165,7 @@ label nsp_event_magls_1_complete :
         m "Да, разумеется."
 
         $screens.Show(Dissolve(1), "blkfade") #Completely black screen.
-        $ herView.data().delItemSet( 'hermione_business_clothes' )
-        call wrd_dress_change_silent
+        $hermi.WrdSetMain()
         hide screen nsp_hermione_business
         show screen hermione_02
         $herView.hideshowQQ( "body_01.png", pos )

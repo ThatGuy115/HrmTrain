@@ -10,6 +10,10 @@ label newsp_letter:
     $ gold += nsp_newspaper_cur_money
     show screen points
     
+    $ letters -= 1
+    if letters <= 0 :
+        $screens.Hide("owl").Show("owl_02")
+    
     show screen bld1
     show screen letter
     show screen ctc
@@ -39,7 +43,7 @@ label newsp_letter:
         dev "О не-е-е-е-е-е-ет... Джинни, я обещаю, что ты не зря учился газетному делу ! Спроси Снейпа, и он подскажет, как заработать больше !"
         $hero("{size=-4}Хммм. Ладно, только ради тебя, дам моду еще один шанс.{/size}")
         $ nsp_newspaper_menu = 3
-
+   
     call screen main_menu_01
 
 label nsp_newsp_themes:

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<item>
+	<key>mouth</key>
+
+	<style name="default">
+		<frame>mouth_default.png</frame>
+		<folder>face</folder>
+		<visible>1</visible>
+		<zorder>face</zorder>
+	</style>
+	<style name="mouth_def">
+		<frame>mouth_default.png</frame>
+	</style>
+	<style name="mouth_dis">
+		<frame>mouth_disgust.png</frame>
+	</style>
+	<style name="mouth_emb">
+		<frame>mouth_embarassment.png</frame>
+	</style>
+	<style name="mouth_ope">
+		<frame>mouth_open.png</frame>
+	</style>
+	
+</item>

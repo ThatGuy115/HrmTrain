@@ -105,7 +105,7 @@ label volone:
             _itemCount=persistent.itemSet.get("scroll")
             _itemCount=0 if _itemCount==None else _itemCount
         for i in range(_scrollSection*15+1, _scrollSection*15+16):
-            if i<=_itemCount:
+            if i<=_itemCount and i <= 13:
                 choose.AddItem("- C."+str(i)+": Священный свиток #"+str(i)+" -", 
                     "vol_description" , i)
     $ choose.Show("after_cam")

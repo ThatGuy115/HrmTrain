@@ -277,12 +277,11 @@ label desk:
             show screen bld1
             with d3
             
-            $ nsp_germiona_forest_1_statimg = "New"
-            $ nsp_germiona_forest_1_photo = "dis"
-            $ nsp_event_forest_1 = 0
+            $ nsp_germiona_kviddich_1_statimg = "New"
+            $ nsp_germiona_kviddich_1_photo = "dis"
+            $ nsp_event_kviddich_1 = 0
             $ cur_level = 1
-            #call wrd_dress_change_silent
-            call nsp_event_forest_1
+            call nsp_event_kviddich_1
             jump hermione_goout
             
         "- Тест 2 -" if False :
@@ -346,12 +345,32 @@ label desk:
             $ hermione_chibi_xpos = 400 #Near the desk.
             $ hermione_chibi_ypos = 250 #Добавил, т.к. без этого иногда падает игра.
             show screen hermione_02 #Hermione stands still.
-            show screen bld1
+            show screen bld1                                  
             with d3
             $ hermi.whoring = 24                 
             
             jump new_request_02
 #            jump hermione_goout 
+
+        "- Тест 7 -" if False:
+            $luna.LoadDefItemSets()
+            $luna.Visibility("body+", False)
+            $luna("~00 right red emb// Привет !")
+            $luna.Visibility()
+            jump desk
+            
+        "- Тест 8 -" if False:
+            $phoenix.LoadDefItemSets()
+            $phoenix.Visibility("body+", False)
+            $phoenix("~a a def o// Привет !")
+            $phoenix.body.data().addItem( 'item_pose_back_open' )
+            $phoenix("Я ухожу.")
+            $phoenix.body.data().delPose()
+            $phoenix.body.data().addItem( 'item_pose_back_closed' )
+            $phoenix(".........")
+            $phoenix.body.data().delPose()  
+            $phoenix.Visibility()
+            jump desk
             
 ### DR'S NEWSPAPER ooo ###
 

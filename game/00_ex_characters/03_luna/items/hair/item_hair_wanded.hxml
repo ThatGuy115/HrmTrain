@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<item>
+	<key>hair_wanded</key>
+
+	<subitems>
+		<item>item_hair_wanded_sub_shadow</item>
+		<item>item_hair_wanded_sub_front</item>
+	</subitems>
+
+	<style name="default">
+		<frame>hair_wanded.png</frame>
+		<folder>hair</folder>
+		<visible>1</visible>
+		<zorder>hair_back</zorder>
+		<parent>head</parent>
+	</style>
+</item>

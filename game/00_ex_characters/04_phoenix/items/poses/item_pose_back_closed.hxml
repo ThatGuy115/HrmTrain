@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<item>
+	<key>pose</key>
+
+	<style name="default">
+		<frame>body_back_closed.png</frame>
+		<folder>pose</folder>
+		<visible>1</visible>
+		<zorder>pose</zorder>
+		<parent></parent>
+		<hidelist>
+		        <item>body</item>
+		        <item>brows</item>
+		        <item>eyes</item>
+		        <item>blush</item>
+		        <item>mouth</item>
+		</hidelist>
+	</style>
+</item>

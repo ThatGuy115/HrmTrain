@@ -656,13 +656,13 @@ label new_request_11: #LV.4 (Whoring = 9 - 11)
 
         call req11_dress
         #$herViewHead.data().addPose( CharacterExItemPoseShowTits( herViewHead.mPoseFolder, 'pose_dress_up.png', G_Z_POSE ) )
-        $herViewHead.data().addItem( 'item_pose_show_tits' )
+        $hermi.WrdSetMain()
+        $hermi.WrdUpShirt()
         $herViewHead.showQ( "body_85.png", posHead )
         her2 "................................"
         $herViewHead.hideQ()
         pause 2
-        $herViewHead.data().delPose()
-        call wrd_dress_change_silent
+        $hermi.WrdSetMain()
         $herViewHead.showQ( "body_33.png", posHead )
         
         

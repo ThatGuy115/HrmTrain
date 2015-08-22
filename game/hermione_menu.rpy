@@ -288,6 +288,7 @@ label hermione_chat:
 ### CHITCHAT WITH HERMIONE ###
 label chit_chat_hermione:
     $ this.RunStep("HERMICHAT")
+    label chit_chat_hermione2 :
     $ one_of_ten = renpy.random.randint(1, 10) #Generating one number out of three for various porpoises.
     $ pos = POS_410
     

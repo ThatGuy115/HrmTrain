@@ -1,0 +1,1 @@
+{"target_version": 14, "name": "WitchTrainer", "package": "ru.witchtrainer.game", "orientation": "landscape", "include_pil": false, "expansion": false, "source": false, "icon_name": "WitchTrainer", "version": "1.5.1", "layout": null, "permissions": ["VIBRATE"], "include_sqlite": false, "store": "none", "numeric_version": "10501"}

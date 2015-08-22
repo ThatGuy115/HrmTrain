@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<item>
+	<key>brows</key>
+
+	<style name="default">
+		<frame>brow_default.png</frame>
+		<folder>face</folder>
+		<visible>1</visible>
+		<zorder>hair</zorder> <!-- Not face - zorder face on hair_front -->
+	</style>
+	<style name="brows_00">
+		<frame>brow_default.png</frame>
+	</style>
+
+</item>

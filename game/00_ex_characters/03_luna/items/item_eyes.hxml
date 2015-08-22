@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<item>
+	<key>eyes</key>
+
+	<style name="default">
+		<frame>eye_default.png</frame>
+		<folder>face</folder>
+		<visible>1</visible>
+		<zorder>hair-1</zorder>
+		<parent>head</parent>
+	</style>
+	<style name="eyes_def">
+		<frame>eye_default.png</frame>
+	</style>
+	<style name="eyes_clo">
+		<frame>eye_closed.png</frame>
+	</style>
+	<style name="eyes_cov">
+		<frame>eye_covered.png</frame>
+	</style>	
+	<style name="eyes_down">
+		<frame>eye_down.png</frame>
+	</style>	
+        <style name="eyes_emp">
+		<frame>eye_empty.png</frame>
+	</style>
+	<style name="eyes_low">
+		<frame>eye_lowered.png</frame>
+	</style>
+	<style name="eyes_right">
+		<frame>eye_right.png</frame>
+	</style>
+        <style name="eyes_stra">
+		<frame>eye_strabism.png</frame>
+	</style>
+        <style name="eyes_up">
+		<frame>eye_up.png</frame>
+	</style>	
+	
+</item>

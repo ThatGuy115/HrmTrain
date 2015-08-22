@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<item>
+	<key>panties_white</key>
+
+	<style name="default">
+		<frame>panties/panties_white.png</frame>
+		<folder>clothes</folder>
+		<zorder>panties</zorder>
+	</style>
+</item>

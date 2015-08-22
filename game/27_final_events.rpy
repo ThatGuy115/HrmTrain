@@ -365,6 +365,8 @@ label want_to_rule:
 
                     $ hermi.WrdNoShirt ()
                     $ hermi.WrdNoSkirt ()
+                    $ hermi.WrdNoStockings()
+                    $ hermi.WrdNoOther()
                     $herView.data().hideItemKey('panties')
 
                     $ hermione_chibi_xpos = 310 # Default 360

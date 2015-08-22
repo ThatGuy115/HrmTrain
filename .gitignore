@@ -10,3 +10,4 @@ log.txt
 game/the_oddities.rpy~
 *.rpy#
 *.pyo
+*.bak

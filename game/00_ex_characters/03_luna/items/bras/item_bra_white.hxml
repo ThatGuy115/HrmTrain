@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<item>
+	<key>bra_white</key>
+
+	<style name="default">
+		<frame>bras/bra_white.png</frame>
+		<folder>clothes</folder>
+		<visible>1</visible>
+		<zorder>dress-10</zorder>
+		<parent></parent>
+		<shift></shift>
+		<transforms></transforms>
+
+	</style>
+</item>

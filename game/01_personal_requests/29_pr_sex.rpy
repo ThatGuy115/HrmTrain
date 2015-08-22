@@ -926,7 +926,7 @@ label new_request_29: #LV.7 (Whoring = 18 - 20)
         
         
     if herViewHead.data().getItem( 'item_sperm' ) != None:
-        $herViewHead.data().addItem( 'item_sperm_dried' )
+        $hermi.WrdSpermDried()
         #$herViewHead.data().addItemKey( 'sperm_after', CharacterExItem( herViewHead.mMiscFolder, "sperm_00_after.png", G_Z_FACE + 1 ) )
     $herViewHead.data().delItem( 'item_sperm' )
     hide screen h_c_u

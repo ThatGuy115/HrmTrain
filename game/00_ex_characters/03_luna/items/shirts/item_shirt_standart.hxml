@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<item>
+	<key>shirt_standart</key>
+
+	<style name="default">
+		<frame>shirts/shirt_standart.png</frame>
+		<folder>clothes</folder>
+		<visible>1</visible>
+		<zorder>dress</zorder>
+		<parent></parent>
+		<shift></shift>
+		<transforms></transforms>
+	</style>
+</item>

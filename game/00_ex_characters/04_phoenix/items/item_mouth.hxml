@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<item>
+	<key>mouth</key>
+
+	<style name="default">
+		<frame>mouth_o.png</frame>
+		<folder>face</folder>
+		<visible>1</visible>
+		<zorder>face</zorder>
+	</style>
+	<style name="mouth_o">
+		<frame>mouth_o.png</frame>
+	</style>
+	<style name="mouth_c">
+		<frame>mouth_c.png</frame>
+	</style>
+	
+</item>

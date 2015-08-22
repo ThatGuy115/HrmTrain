@@ -94,7 +94,7 @@ label daphne_approaching(isKnocking=False):
                         "\"(Не сейчас.)\"":
                             jump daphne_main_menu_requests 
                     
-                    if not wtevent.Name in {"dap_request_01", "IsRunNumber(4)"}: # Дневные задания или задания на которых не обещается подрок
+                    if not wtevent.Name in {"dap_request_01", "IsRunNumber(4)", "dap_request_03"}: # Дневные задания или задания на которых не обещается подрок
                         call daphne_pre_menu(_return) # Вызов меню подарков
                     else:
                         $screens.HideD3("bld1")

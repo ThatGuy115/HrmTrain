@@ -128,11 +128,18 @@ label nsp_event_kviddich_1_complete :
             m "Привет. Вот твой костюм."
         
         $screens.Show(Dissolve(1), "blkfade") #Completely black screen.
-        call wrd_dress_undress
-        $ herView.data().addItem ("item_tits_no")
-        $ herView.data().addItemSet( 'hermione_cheerleader_gryffindor' )
+        #call wrd_dress_undress
+        #$ herView.data().addItem ("item_tits_no")
+        #$ herView.data().addItemSet( 'hermione_cheerleader_gryffindor' )
+        
+        $hermi.WrdDress ("skirt_cheerleader")
+        $hermi.WrdDress ("shirt_cheerleader")
+        $hermi.WrdNoStockings()
+        $hermi.WrdNoOther()
+               
         hide screen hermione_02
         show screen nsp_hermione_cheerleader_gryffindor
+        $hermi.WrdMain()
         $herView.hideshowQQ( "body_03.png", pos )
         pause.5
         $screens.Hide(Dissolve(1), "blkfade") #Completely black screen.
@@ -185,8 +192,7 @@ label nsp_event_kviddich_1_complete :
         her "Ох… Да, сэр."
 
         $screens.Show(Dissolve(1), "blkfade") #Completely black screen.
-        $ herView.data().delItemSet( 'hermione_cheerleader_gryffindor' )
-        call wrd_dress_change_silent
+        $hermi.WrdSetMain()
         hide screen nsp_hermione_cheerleader_gryffindor_dance2
         show screen hermione_02
         $herView.hideshowQQ( "body_33.png", pos )

@@ -7,7 +7,7 @@
 		<frame>hermione_bugged_branch.png</frame>
 		<folder>pose</folder>
 		<visible>1</visible>
-		<zorder>face+5</zorder>
+		<zorder>headwear+5</zorder>
 		<actions>
 			<action event="selfAdded">
 				<body>

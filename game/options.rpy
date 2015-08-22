@@ -26,14 +26,14 @@ init -1 python hide:
     ## running in a window.
 
     if _preferences.language == "english" :
-        config.window_title = u"Witch Trainer v.1.5 (Russian Edition)"
+        config.window_title = u"Witch Trainer v.1.5.1 (Russian Edition)"
     else :
-        config.window_title = u"Воспитание Ведьмы v.1.5 (Русская редакция)"
+        config.window_title = u"Воспитание Ведьмы v.1.5.1 (Русская редакция)"
 
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.
     config.name = "Witch Trainer"
-    config.version = "1.5"
+    config.version = "1.5.1"
 
     #########################################
     # Themes

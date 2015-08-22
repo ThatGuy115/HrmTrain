@@ -10,5 +10,7 @@
     # most used positions of hermione sprite
     POS_410 = gMakePos( 410, 0 )
     POS_370 = gMakePos( 370, 0 )
+    POS_320 = gMakePos( 320, 0 )
     POS_120 = gMakePos( 120, 0 )
     POS_140 = gMakePos( 140, 0 )
+    POS_610f = gMakePos( 610, 70 )

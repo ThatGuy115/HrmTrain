@@ -8,6 +8,10 @@ init python:
         '00_ex_characters', '00_ex_characters/01_daphne', '00_ex_characters/01_daphne' )
     WTXmlLinker.prepareCharacterResources( 'snape', 
         '00_ex_characters', '00_ex_characters/02_snape', '00_ex_characters/02_snape' )
+    WTXmlLinker.prepareCharacterResources( 'luna', 
+        '00_ex_characters', '00_ex_characters/03_luna', '00_ex_characters/03_luna' )
+    WTXmlLinker.prepareCharacterResources( 'phoenix', 
+        '00_ex_characters', '00_ex_characters/04_phoenix', '00_ex_characters/04_phoenix' )
 
 
 init:
@@ -212,6 +216,20 @@ init:
             constVals={"pos_door": gMakePos( 350, 0 ), "pos_doorleft": gMakePos( 300, 0 ), "pos_center": POS_140}))
         SetArrayValue("chibisnape", "door", [610,210])
         SetArrayValue("chibisnape", "center", [360,210])
+        
+        global luna
+        luna=RegEntry(Person("luna", "Луна", CharacterExData( WTXmlLinker.getLinkerKey_luna()), 
+            defVals={"pos": POS_320, "pos2": gMakePos( 340, 420 )}, 
+            constVals={"pos_door": gMakePos( 460, -60 ), "pos_center": POS_140}))
+        SetArrayValue("chibiluna", "door", [610,220])
+        SetArrayValue("chibiluna", "center", [370,220])
+        
+        global phoenix
+        phoenix=RegEntry(Person("phoenix", "Феникс", CharacterExData( WTXmlLinker.getLinkerKey_phoenix()), 
+            defVals={"pos": POS_610f, "pos2": gMakePos( 340, 420 )}, 
+            constVals={"pos_door": gMakePos( 460, -60 ), "pos_center": POS_140}))
+        SetArrayValue("chibiphoenix", "door", [610,220])
+        SetArrayValue("chibiphoenix", "center", [370,220])
 
 
 
@@ -322,6 +340,14 @@ init:
 
 # Поскольку точка "DAPHENTER" предваряет вызов меню и ивентов ниже, никаких дополнительных условий в ивентах меню не требуется
         this.Where({"DAPHENTER"},"dap_interlude_02").AddStep("dap_interlude_02", ready=lambda e: this.dap_request_02._finishCount>=1,constVals={"members":{"daphne"}})
+
+        li={"05":["\"Научите меня\"","#(Перейдем непосредственно к тренеровке...)"]}
+        for s in li:
+                this.AddEvent("dap_request_"+s+"::"+li[s][0], points={"daphne_private"}, constVals={"eventPlan":li[s][1], "members":{"daphne"}}, defVals={"heartCount": 0}) 
+
+        li={"04":["\"Больше откровенности\"","#(Полагаю алкоголь раскрепостит её...)"]}
+        for s in li:
+                this.AddEvent("dap_request_"+s+"::"+li[s][0], points={"daphne_private"}, constVals={"eventPlan":li[s][1], "members":{"daphne"}}, defVals={"heartCount": 0}) 
 
         li={"03":["\"Популярность\"","#(Пора занять её чем-то новым...)"]}
         for s in li:
@@ -719,6 +745,28 @@ image blk50 = im.Alpha("blackfade.png", 0.5)
 
 
 
+    #$#$# DAPHNE ANIMATIONS #$#$#
+
+image dap_fap:
+    "03_hp/24_daphne/dap_fap_a1.png"
+    pause 0.8
+    "03_hp/24_daphne/dap_fap_a1.png"
+    pause 0.8
+    "03_hp/24_daphne/dap_fap_a3.png"
+    pause 0.8
+    "03_hp/24_daphne/dap_fap_a4.png"
+    pause 0.8
+    "03_hp/24_daphne/dap_fap_a5.png"
+    pause 0.8
+    "03_hp/24_daphne/dap_fap_a6.png"
+    pause 0.8
+    restart
+
+image dap_look_a1:
+    "03_hp/24_daphne/dap_title_a1.png"
+
+image dap_look_a2:
+    "03_hp/24_daphne/dap_title_a2.png"
 
     ### INTRO MOVIE ANIMATIONS ###
 
@@ -3823,6 +3871,9 @@ init-2:
     $ sna2 = Character('Северус Снейп', color="#402313", window_right_padding=220, show_two_window=True, ctc="ctc3", ctc_position="fixed")  #Text box used for "head only" speech. (Because it has padding).
     $ vol = Character('Лорд Волдеморт', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ l = Character('Лола', color="#402313", window_right_padding=230, show_two_window=True, ctc="ctc3", ctc_position="fixed") #Text box used for "head only" speech. (Because it has padding).
+    
+    $ lun = Character('Луна', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
+    $ pho = Character('Феникс', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     
 #    $ daph = Character('Дафна', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
 #    $ daph2 = Character('Дафна', color="#402313", window_right_padding=220, show_two_window=True, ctc="ctc3", ctc_position="fixed") #Это текстовое окно, оно используется для головы(потому что имеет отступы)

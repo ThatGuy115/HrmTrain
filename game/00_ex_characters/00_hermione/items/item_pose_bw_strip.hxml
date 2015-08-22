@@ -6,6 +6,6 @@
 	<style name="default">
 		<frame>hermione_bw_strip.png</frame>
 		<folder>pose</folder>
-		<zorder>face + 1</zorder>
+		<zorder>headwear + 1</zorder>
 	</style>
 </item>
